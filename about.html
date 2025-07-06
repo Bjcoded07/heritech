@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HERITECH Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#f59e0b',
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary">HERITECH</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition duration-300">Home</a>
+                    <a href="properties.html" class="text-gray-700 hover:text-primary transition duration-300">Properties</a>
+                    <a href="about.html" class="text-primary font-semibold border-b-2 border-primary pb-1">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="properties.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Properties</a>
+                <a href="about.html" class="block px-3 py-2 text-primary font-semibold">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white py-20 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About HERITECH</h1>
+            <p class="text-xl opacity-90">Revolutionizing real estate through technology and expertise</p>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Founded in 2009, HERITECH emerged from a simple vision: to transform the real estate industry by combining cutting-edge technology with personalized service. What started as a small team of passionate real estate professionals has grown into a leading force in the market.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Over the past 15 years, we've helped thousands of families find their dream homes and assisted countless investors in building their portfolios. Our commitment to innovation has led us to develop proprietary tools and systems that streamline the buying and selling process.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Today, HERITECH stands as a testament to what's possible when technology meets human expertise. We continue to push boundaries and set new standards in the real estate industry.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="HERITECH Office" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Foundation</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    The principles that guide everything we do
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mission -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bullseye text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                    <p class="text-gray-700">
+                        To empower every client with the tools, knowledge, and support they need to make informed real estate decisions while delivering exceptional service that exceeds expectations.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <div class="bg-secondary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+                    <p class="text-gray-700">
+                        To be the most trusted and innovative real estate company, setting the standard for how technology can enhance human connections in property transactions.
+                    </p>
+                </div>
+                
+                <!-- Values -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <div class="bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Our Values</h3>
+                    <p class="text-gray-700">
+                        Integrity, innovation, and client-first approach drive everything we do. We believe in transparency, continuous improvement, and building lasting relationships.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Experienced professionals dedicated to your success
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Michael Johnson" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Michael Johnson</h3>
+                    <p class="text-primary font-semibold mb-2">CEO & Founder</p>
+                    <p class="text-gray-600 mb-4">15+ years in real estate, technology innovator, and industry thought leader.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sarah Davis" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Sarah Davis</h3>
+                    <p class="text-primary font-semibold mb-2">VP of Sales</p>
+                    <p class="text-gray-600 mb-4">Award-winning sales leader with expertise in luxury properties and client relations.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="John Smith" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2">John Smith</h3>
+                    <p class="text-primary font-semibold mb-2">Senior Agent</p>
+                    <p class="text-gray-600 mb-4">Top-performing agent specializing in residential properties and first-time buyers.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Emily Chen" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Emily Chen</h3>
+                    <p class="text-primary font-semibold mb-2">Marketing Director</p>
+                    <p class="text-gray-600 mb-4">Digital marketing expert focused on innovative property promotion strategies.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Awards & Recognition</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Industry recognition for our commitment to excellence
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-secondary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-trophy text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Best Real Estate Agency</h3>
+                    <p class="text-gray-600">City Business Awards 2023</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-medal text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Innovation in Technology</h3>
+                    <p class="text-gray-600">Real Estate Tech Summit 2023</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-accent text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-star text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Top Customer Service</h3>
+                    <p class="text-gray-600">Regional Excellence Awards 2022</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-700 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Certified Excellence</h3>
+                    <p class="text-gray-600">National Realty Association</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Stats -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Impact</h2>
+                <p class="text-xl opacity-90">Numbers that speak to our success</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-5xl font-bold mb-2">500+</div>
+                    <div class="text-lg opacity-90">Properties Sold</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">1,200+</div>
+                    <div class="text-lg opacity-90">Happy Clients</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">$250M+</div>
+                    <div class="text-lg opacity-90">Total Sales Volume</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">15+</div>
+                    <div class="text-lg opacity-90">Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Ready to Work with Us?</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Experience the HERITECH difference. Let our team of experts help you achieve your real estate goals.
+            </p>
+            <div class="space-x-4">
+                <a href="properties.html" class="bg-primary hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 inline-block">
+                    View Properties
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 inline-block">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">HERITECH</h3>
+                    <p class="text-gray-400 mb-4">
+                        Your trusted partner in real estate, combining technology with expertise to deliver exceptional results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="properties.html" class="text-gray-400 hover:text-white transition duration-300">Properties</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Sales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Rentals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Investment Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@heritech.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> 123 Real Estate Ave, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 HERITECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

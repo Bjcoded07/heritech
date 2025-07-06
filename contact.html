@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HERITECH Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#f59e0b',
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary">HERITECH</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition duration-300">Home</a>
+                    <a href="properties.html" class="text-gray-700 hover:text-primary transition duration-300">Properties</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition duration-300">About</a>
+                    <a href="contact.html" class="text-primary font-semibold border-b-2 border-primary pb-1">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="properties.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Properties</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-primary font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white py-20 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-xl opacity-90">Get in touch with our real estate experts</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-gray-700 font-medium mb-2">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your first name">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-gray-700 font-medium mb-2">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your last name">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject *</label>
+                            <select id="subject" name="subject" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select a subject</option>
+                                <option value="buying">I'm interested in buying</option>
+                                <option value="selling">I want to sell my property</option>
+                                <option value="renting">I'm looking for rentals</option>
+                                <option value="investment">Investment opportunities</option>
+                                <option value="general">General inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="6" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your real estate needs..."></textarea>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="newsletter" name="newsletter" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
+                            <label for="newsletter" class="ml-2 block text-sm text-gray-700">
+                                I would like to receive updates about new properties and market insights
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <!-- Contact Details -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-lg mb-1">Office Address</h3>
+                                    <p class="text-gray-600">123 Real Estate Avenue<br>Downtown Business District<br>City, State 12345</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-lg mb-1">Phone Numbers</h3>
+                                    <p class="text-gray-600">Main: +1 (555) 123-4567<br>Sales: +1 (555) 123-4568<br>Support: +1 (555) 123-4569</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-lg mb-1">Email Addresses</h3>
+                                    <p class="text-gray-600">General: info@heritech.com<br>Sales: sales@heritech.com<br>Support: support@heritech.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gray-700 text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-lg mb-1">Business Hours</h3>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 7:00 PM<br>Saturday: 9:00 AM - 5:00 PM<br>Sunday: 10:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Follow Us</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="#" class="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg transition duration-300">
+                                <i class="fab fa-facebook-f mr-2"></i>
+                                Facebook
+                            </a>
+                            <a href="#" class="flex items-center justify-center bg-blue-400 hover:bg-blue-500 text-white py-3 px-4 rounded-lg transition duration-300">
+                                <i class="fab fa-twitter mr-2"></i>
+                                Twitter
+                            </a>
+                            <a href="#" class="flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white py-3 px-4 rounded-lg transition duration-300">
+                                <i class="fab fa-instagram mr-2"></i>
+                                Instagram
+                            </a>
+                            <a href="#" class="flex items-center justify-center bg-blue-800 hover:bg-blue-900 text-white py-3 px-4 rounded-lg transition duration-300">
+                                <i class="fab fa-linkedin-in mr-2"></i>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Find Our Office</h2>
+                <p class="text-lg text-gray-600">Visit us at our downtown location</p>
+            </div>
+            <!-- Map Placeholder -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="relative h-96 bg-gray-300 flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fas fa-map-marker-alt text-6xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-700 mb-2">Interactive Map</h3>
+                        <p class="text-gray-600">123 Real Estate Avenue, Downtown Business District</p>
+                        <a href="https://maps.google.com" target="_blank" class="inline-block mt-4 bg-primary hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+                            View on Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Quick answers to common questions</p>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">How quickly can you help me find a property?</h3>
+                    <p class="text-gray-700">Our response time is typically within 24 hours. We can schedule property viewings within 48-72 hours depending on availability.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">Do you charge consultation fees?</h3>
+                    <p class="text-gray-700">Initial consultations are completely free. We only earn when you successfully buy or sell a property through our services.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">What areas do you serve?</h3>
+                    <p class="text-gray-700">We serve the entire metropolitan area including downtown, suburbs, and surrounding counties. Contact us to confirm coverage in your specific area.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold mb-2">Can you help with financing?</h3>
+                    <p class="text-gray-700">Yes, we work with trusted mortgage brokers and lenders to help you secure the best financing options for your situation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">HERITECH</h3>
+                    <p class="text-gray-400 mb-4">
+                        Your trusted partner in real estate, combining technology with expertise to deliver exceptional results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="properties.html" class="text-gray-400 hover:text-white transition duration-300">Properties</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Sales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Rentals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Investment Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@heritech.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> 123 Real Estate Ave, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 HERITECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

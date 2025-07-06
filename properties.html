@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - HERITECH Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#f59e0b',
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary">HERITECH</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition duration-300">Home</a>
+                    <a href="properties.html" class="text-primary font-semibold border-b-2 border-primary pb-1">Properties</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition duration-300">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="properties.html" class="block px-3 py-2 text-primary font-semibold">Properties</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white py-20 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Properties</h1>
+            <p class="text-xl opacity-90">Discover your perfect home from our curated collection</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="py-8 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-4 items-center justify-between">
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center space-x-2">
+                        <label class="text-gray-700 font-medium">Price Range:</label>
+                        <select id="priceFilter" class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="all">All Prices</option>
+                            <option value="0-300000">Under $300K</option>
+                            <option value="300000-500000">$300K - $500K</option>
+                            <option value="500000-800000">$500K - $800K</option>
+                            <option value="800000-1000000">$800K - $1M</option>
+                            <option value="1000000+">$1M+</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <label class="text-gray-700 font-medium">Property Type:</label>
+                        <select id="typeFilter" class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="all">All Types</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="townhouse">Townhouse</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-gray-600">
+                    <span id="propertyCount">12</span> properties found
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="propertiesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300" data-price="750000" data-type="house">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Family Home" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            For Sale
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Modern Family Home</h3>
+                            <span class="text-2xl font-bold text-primary">$750,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> 123 Oak Street, Downtown</p>
+                        <div class="flex justify-between items-center mb-4 text-gray-600">
+                            <span><i class="fas fa-bed mr-1"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath mr-1"></i> 3 Baths</span>
+                            <span><i class="fas fa-ruler-combined mr-1"></i> 2,500 sq ft</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Beautiful modern home with spacious rooms, updated kitchen, and large backyard perfect for families.</p>
+                        <a href="property.html?id=1" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300" data-price="450000" data-type="apartment">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Apartment" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            For Rent
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Luxury Apartment</h3>
+                            <span class="text-2xl font-bold text-primary">$450,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> 456 Pine Avenue, Midtown</p>
+                        <div class="flex justify-between items-center mb-4 text-gray-600">
+                            <span><i class="fas fa-bed mr-1"></i> 2 Beds</span>
+                            <span><i class="fas fa-bath mr-1"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined mr-1"></i> 1,200 sq ft</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Elegant apartment with city views, modern amenities, and prime location near shopping and dining.</p>
+                        <a href="property.html?id=2" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300" data-price="925000" data-type="condo">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Waterfront Condo" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            For Sale
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Waterfront Condo</h3>
+                            <span class="text-2xl font-bold text-primary">$925,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> 789 Harbor View, Waterfront</p>
+                        <div class="flex justify-between items-center mb-4 text-gray-600">
+                            <span><i class="fas fa-bed mr-1"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath mr-1"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined mr-1"></i> 1,800 sq ft</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Stunning waterfront condo with panoramic views, premium finishes, and resort-style amenities.</p>
+                        <a href="property.html?id=3" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property 4 -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300" data-price="325000" data-type="townhouse">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozy Townhouse" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            For Sale
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Cozy Townhouse</h3>
+                            <span class="text-2xl font-bold text-primary">$325,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> 321 Maple Lane, Suburbs</p>
+                        <div class="flex justify-between items-center mb-4 text-gray-600">
+                            <span><i class="fas fa-bed mr-1"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath mr-1"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined mr-1"></i> 1,600 sq ft</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Charming townhouse in quiet neighborhood with private patio and attached garage.</p>
+                        <a href="property.html?id=4" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property 5 -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300" data-price="1250000" data-type="house">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Executive Estate" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            For Sale
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Executive Estate</h3>
+                            <span class="text-2xl font-bold text-primary">$1,250,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> 555 Executive Drive, Hills</p>
+                        <div class="flex justify-between items-center mb-4 text-gray-600">
+                            <span><i class="fas fa-bed mr-1"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath mr-1"></i> 4 Baths</span>
+                            <span><i class="fas fa-ruler-combined mr-1"></i> 4,200 sq ft</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Luxurious estate home with premium features, gourmet kitchen, and expansive grounds.</p>
+                        <a href="property.html?id=5" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property 6 -->
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300" data-price="385000" data-type="apartment">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Urban Loft" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            For Rent
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Urban Loft</h3>
+                            <span class="text-2xl font-bold text-primary">$385,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt mr-1"></i> 888 Industrial Way, Arts District</p>
+                        <div class="flex justify-between items-center mb-4 text-gray-600">
+                            <span><i class="fas fa-bed mr-1"></i> 1 Bed</span>
+                            <span><i class="fas fa-bath mr-1"></i> 1 Bath</span>
+                            <span><i class="fas fa-ruler-combined mr-1"></i> 900 sq ft</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Trendy loft with exposed brick, high ceilings, and modern industrial design elements.</p>
+                        <a href="property.html?id=6" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">HERITECH</h3>
+                    <p class="text-gray-400 mb-4">
+                        Your trusted partner in real estate, combining technology with expertise to deliver exceptional results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="properties.html" class="text-gray-400 hover:text-white transition duration-300">Properties</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Sales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Rentals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Investment Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@heritech.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> 123 Real Estate Ave, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 HERITECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

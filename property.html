@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - HERITECH Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#f59e0b',
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary">HERITECH</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition duration-300">Home</a>
+                    <a href="properties.html" class="text-gray-700 hover:text-primary transition duration-300">Properties</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition duration-300">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="properties.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Properties</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="bg-white py-4 mt-16 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-4">
+                    <li>
+                        <a href="index.html" class="text-gray-500 hover:text-primary">Home</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right text-gray-400 text-sm"></i>
+                    </li>
+                    <li>
+                        <a href="properties.html" class="text-gray-500 hover:text-primary">Properties</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right text-gray-400 text-sm"></i>
+                    </li>
+                    <li class="text-gray-900 font-medium">Modern Family Home</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Property Details -->
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Image Gallery -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <!-- Main Image -->
+                        <div class="relative">
+                            <img id="mainImage" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Property Main Image" class="w-full h-96 object-cover">
+                            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                For Sale
+                            </div>
+                            <div class="absolute top-4 right-4 flex space-x-2">
+                                <button class="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition duration-300">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition duration-300">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Thumbnail Gallery -->
+                        <div class="p-4">
+                            <div class="grid grid-cols-4 gap-2">
+                                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Thumbnail 1" class="thumbnail w-full h-20 object-cover rounded cursor-pointer border-2 border-primary" onclick="changeMainImage(this.src.replace('w=300', 'w=1200'))">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Thumbnail 2" class="thumbnail w-full h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-primary" onclick="changeMainImage(this.src.replace('w=300', 'w=1200'))">
+                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Thumbnail 3" class="thumbnail w-full h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-primary" onclick="changeMainImage(this.src.replace('w=300', 'w=1200'))">
+                                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Thumbnail 4" class="thumbnail w-full h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-primary" onclick="changeMainImage(this.src.replace('w=300', 'w=1200'))">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Info Sidebar -->
+                <div class="space-y-6">
+                    <!-- Price and Basic Info -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h1 class="text-3xl font-bold text-gray-900">Modern Family Home</h1>
+                            <span class="text-3xl font-bold text-primary">$750,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            123 Oak Street, Downtown, City, State 12345
+                        </p>
+                        
+                        <!-- Property Features -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <i class="fas fa-bed text-primary text-xl mb-2"></i>
+                                <div class="font-semibold">4 Bedrooms</div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <i class="fas fa-bath text-primary text-xl mb-2"></i>
+                                <div class="font-semibold">3 Bathrooms</div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <i class="fas fa-ruler-combined text-primary text-xl mb-2"></i>
+                                <div class="font-semibold">2,500 sq ft</div>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded-lg">
+                                <i class="fas fa-car text-primary text-xl mb-2"></i>
+                                <div class="font-semibold">2 Car Garage</div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Buttons -->
+                        <div class="space-y-3">
+                            <button class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                <i class="fas fa-phone mr-2"></i>
+                                Call Agent
+                            </button>
+                            <button class="w-full bg-secondary hover:bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                <i class="fas fa-calendar mr-2"></i>
+                                Schedule Tour
+                            </button>
+                            <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Agent Info -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Listing Agent</h3>
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Agent" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-lg">John Smith</h4>
+                                <p class="text-gray-600">Senior Real Estate Agent</p>
+                                <div class="flex items-center mt-1">
+                                    <div class="flex text-yellow-400 mr-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">5.0 (127 reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <p><i class="fas fa-phone mr-2 text-primary"></i> +1 (555) 123-4567</p>
+                            <p><i class="fas fa-envelope mr-2 text-primary"></i> john.smith@heritech.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Description -->
+            <div class="mt-8 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">Property Description</h2>
+                <div class="prose max-w-none">
+                    <p class="text-gray-700 mb-4">
+                        Welcome to this stunning modern family home located in the heart of downtown. This beautifully designed 4-bedroom, 3-bathroom residence offers 2,500 square feet of luxurious living space, perfect for families seeking comfort and style.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        The open-concept main floor features a spacious living room with vaulted ceilings and large windows that flood the space with natural light. The gourmet kitchen boasts premium stainless steel appliances, granite countertops, and a large island perfect for entertaining.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Upstairs, you'll find the master suite with a walk-in closet and ensuite bathroom featuring a soaking tub and separate shower. Three additional bedrooms provide ample space for family or guests. The finished basement offers additional living space and storage.
+                    </p>
+                </div>
+
+                <!-- Property Features -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Interior Features</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Hardwood floors throughout</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Updated kitchen with granite counters</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Master suite with walk-in closet</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Finished basement</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Central air conditioning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Fireplace in living room</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Exterior Features</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Large backyard with patio</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> 2-car attached garage</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Professional landscaping</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Sprinkler system</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Covered front porch</li>
+                            <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Storage shed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Details Table -->
+            <div class="mt-8 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">Property Details</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">Property Type:</span>
+                            <span>Single Family Home</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">Year Built:</span>
+                            <span>2018</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">Lot Size:</span>
+                            <span>0.25 acres</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">Heating:</span>
+                            <span>Forced Air, Gas</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">Cooling:</span>
+                            <span>Central Air</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">MLS #:</span>
+                            <span>HT123456</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">Property Tax:</span>
+                            <span>$8,500/year</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">HOA Fees:</span>
+                            <span>$150/month</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">Days on Market:</span>
+                            <span>12 days</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-medium">Price per sq ft:</span>
+                            <span>$300</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="mt-8 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">Request More Information</h2>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">First Name</label>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your first name">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Last Name</label>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your last name">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your email">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Phone</label>
+                        <input type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your phone number">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 font-medium mb-2">Message</label>
+                        <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="I'm interested in this property..."></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">HERITECH</h3>
+                    <p class="text-gray-400 mb-4">
+                        Your trusted partner in real estate, combining technology with expertise to deliver exceptional results.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="properties.html" class="text-gray-400 hover:text-white transition duration-300">Properties</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Sales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Rentals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Investment Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Property Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@heritech.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> 123 Real Estate Ave, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 HERITECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function changeMainImage(src) {
+            document.getElementById('mainImage').src = src;
+            // Update thumbnail borders
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('border-primary');
+                thumb.classList.add('border-transparent');
+            });
+            event.target.classList.remove('border-transparent');
+            event.target.classList.add('border-primary');
+        }
+    </script>
+</body>
+</html>
+
